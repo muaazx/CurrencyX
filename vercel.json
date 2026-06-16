@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "env": {
+    "EXCHANGE_RATE_API_KEY": "@exchange-rate-api-key"
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" }
+      ]
+    }
+  ]
+}

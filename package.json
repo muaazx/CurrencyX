@@ -1,0 +1,11 @@
+{
+  "name": "currencyxbot",
+  "version": "1.0.0",
+  "description": "CurrencyX — Real-Time Currency Converter",
+  "scripts": {
+    "dev": "npx serve . --listen 3456",
+    "start": "npx serve . --listen 3456",
+    "build": "echo 'Static site — no build step needed'"
+  },
+  "license": "MIT"
+}

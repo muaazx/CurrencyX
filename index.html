@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CurrencyX — Real-Time Currency Converter</title>
+  <meta name="description" content="Convert between 150+ world currencies instantly with live exchange rates powered by ExchangeRate-API." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated background orbs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="app-wrapper">
+
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo">
+        <span class="logo-icon">💱</span>
+        <span class="logo-text">CurrencyX</span>
+      </div>
+      <div class="live-badge">
+        <span class="live-dot"></span>
+        Live Rates
+      </div>
+    </header>
+
+    <!-- Main converter card -->
+    <main>
+      <section class="converter-card" aria-label="Currency Converter">
+        <h1 class="card-title">Real-Time Currency Converter</h1>
+        <p class="card-subtitle">Convert between 150+ currencies with live exchange rates</p>
+
+        <!-- Amount Input -->
+        <div class="field-group" id="amount-group">
+          <label class="field-label" for="amount-input">Amount</label>
+          <div class="input-wrapper">
+            <span class="input-prefix" id="base-symbol">$</span>
+            <input
+              type="number"
+              id="amount-input"
+              class="field-input"
+              placeholder="1.00"
+              value="1"
+              min="0"
+              step="any"
+              aria-label="Amount to convert"
+            />
+          </div>
+        </div>
+
+        <!-- Currency selectors row -->
+        <div class="currencies-row">
+          <!-- From Currency -->
+          <div class="field-group currency-field">
+            <label class="field-label" for="from-currency">From</label>
+            <div class="select-wrapper">
+              <select id="from-currency" class="field-select" aria-label="Base currency">
+                <option value="">Loading…</option>
+              </select>
+              <span class="select-arrow">▾</span>
+            </div>
+          </div>
+
+          <!-- Swap Button -->
+          <button id="swap-btn" class="swap-btn" aria-label="Swap currencies" title="Swap currencies">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 16V4m0 0L3 8m4-4l4 4"/>
+              <path d="M17 8v12m0 0l4-4m-4 4l-4-4"/>
+            </svg>
+          </button>
+
+          <!-- To Currency -->
+          <div class="field-group currency-field">
+            <label class="field-label" for="to-currency">To</label>
+            <div class="select-wrapper">
+              <select id="to-currency" class="field-select" aria-label="Target currency">
+                <option value="">Loading…</option>
+              </select>
+              <span class="select-arrow">▾</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Convert Button -->
+        <button id="convert-btn" class="convert-btn" aria-label="Convert currency">
+          <span class="btn-text">Convert Now</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+        </button>
+
+        <!-- Result Panel -->
+        <div id="result-panel" class="result-panel" role="region" aria-live="polite" aria-label="Conversion result">
+          <div class="result-amount" id="result-amount"></div>
+          <div class="result-rate" id="result-rate"></div>
+          <div class="result-timestamp" id="result-timestamp"></div>
+        </div>
+
+        <!-- Error Panel -->
+        <div id="error-panel" class="error-panel" role="alert" aria-live="assertive">
+          <span class="error-icon">⚠️</span>
+          <span id="error-message"></span>
+        </div>
+
+      </section>
+
+      <!-- Popular Currencies Quick Access -->
+      <section class="quick-section" aria-label="Popular currency pairs">
+        <h2 class="quick-title">Popular Pairs</h2>
+        <div class="quick-grid" id="quick-grid">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="app-footer">
+      <p>Powered by <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener noreferrer">ExchangeRate-API</a> · Rates update every 24 hours</p>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
