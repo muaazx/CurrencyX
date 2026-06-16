@@ -1,8 +1,5 @@
 {
   "version": 2,
-  "env": {
-    "EXCHANGE_RATE_API_KEY": "@exchange-rate-api-key"
-  },
   "headers": [
     {
       "source": "/api/(.*)",

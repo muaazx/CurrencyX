@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ````markdown
 # 🤖 CurrencyXBot – Telegram Currency Converter Bot
@@ -90,3 +91,7 @@ This project is open source under the [MIT License](LICENSE).
 
 **Manaen** – self-Proclaimed back street Python & C# programmer exploring APIs, bots, and backend systems.
 
+=======
+# CurrencyX
+Real-time currency converter for 150+ currencies — includes a sleek web app deployed on Vercel. Powered by ExchangeRate-API. 
+>>>>>>> f8f94a6c6fc674c5464262716192494090c72244
