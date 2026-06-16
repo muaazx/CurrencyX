@@ -1,23 +1,20 @@
 <<<<<<< HEAD
 
 ````markdown
-# 🤖 CurrencyXBot – Telegram Currency Converter Bot
+# 🤖 CurrencyX - Currency Converter
 
-CurrencyXBot is a Python-powered Telegram bot that allows users to:
+CurrencyX is a Python-powered App that allows users to:
 - 🌍 Convert between over 150 international currencies
 - 💹 Check real-time exchange rates
 - 📜 List all supported currencies
 
 This project integrates:
-- **Telegram Bot API** for communication
 - **ExchangeRate-API** for currency conversion
-
 ---
 
 ## 🚀 Features
 
-- `/start`: Begin interaction with the bot
-- `/help`: Instructions and usage guide
+- `/start`: Select the languages 
 - `/convert 100 USD to GHS`: Convert amount from one currency to another
 - `/showrate USD to GHS`: Get current exchange rate between currencies
 - `/currencysupported`: List all supported currencies
@@ -27,7 +24,6 @@ This project integrates:
 ## 🛠 Requirements
 
 - Python 3.7+
-- Telegram Bot Token from [@BotFather](https://t.me/BotFather)
 - Free API key from [https://www.exchangerate-api.com](https://www.exchangerate-api.com)
 
 ---
@@ -37,8 +33,8 @@ This project integrates:
 ### 📁 1. Clone this Repository
 
 ```bash
-git clone https://github.com/ManaenB/CurrencyXBot.git
-cd CurrencyXBot
+git clone https://github.com/muaazx/CurrencyXBo.git
+cd CurrencyX
 ````
 
 ### 📦 2. Create Virtual Environment (Recommended)
@@ -61,7 +57,6 @@ pip install -r requirements.txt
 
 ```json
 {
-  "TELEGRAM_BOT_TOKEN": "your-telegram-bot-token",
   "EXCHANGE_RATE_API_KEY": "your-exchange-rate-api-key"
 }
 ```
@@ -82,9 +77,9 @@ This project is open source under the [MIT License](LICENSE).
 
 ## 🤝 Acknowledgments
 
-* Telegram Bot API Docs: [https://core.telegram.org/bots/api](https://core.telegram.org/bots/api)
 * ExchangeRate-API: [https://www.exchangerate-api.com](https://www.exchangerate-api.com)
 
+<<<<<<< HEAD
 ---
 
 ## ✨ Created by
@@ -95,3 +90,5 @@ This project is open source under the [MIT License](LICENSE).
 # CurrencyX
 Real-time currency converter for 150+ currencies — includes a sleek web app deployed on Vercel. Powered by ExchangeRate-API. 
 >>>>>>> f8f94a6c6fc674c5464262716192494090c72244
+=======
+>>>>>>> c5ad97e55fe78e355ee5581ce8ef1059b6e9dd9c
